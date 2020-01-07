@@ -14,9 +14,16 @@ public class Customer extends CustomerDatabase{
             state.setString(3, telp);
             int cek = state.executeUpdate();
             if(cek > 0){
+                System.out.println("");
+                System.out.println("=============================");
                 System.out.println("Insert Data Customer Berhasil");
+                System.out.println("=============================");
+                System.out.println("");
             }else{
+                System.out.println("");
+                System.out.println("==========================");
                 System.out.println("Insert Data Customer Gagal");
+                System.out.println("===========================");
             }
         } catch (Exception e) {
         }

@@ -11,13 +11,18 @@ public class Main {
     Scanner in = new Scanner(System.in);
     
     public void login(){
-        System.out.println("Login or Register?");
+        System.out.println("================");
+        System.out.println("Pilih salah satu");
         System.out.println("1. Login");
         System.out.println("2. Register");
+        System.out.println("================");
+        System.out.println("Pilih: ");
         int jawab = in.nextInt();
         if(jawab == 1){
             int login = 1;
             while(login == 1){
+                System.out.println("");
+                System.out.println("-----");
                 System.out.println("Login");
                 System.out.println("-----");
                 System.out.println("Username :");
@@ -47,10 +52,11 @@ public class Main {
     
     public void program(){
         System.out.println("Program Rental Mobil");
-        System.out.println("--------------------");
+        System.out.println("---------------------");
         System.out.println("1. Manajemen Mobil");
         System.out.println("2. Manajemen Customer");
-        System.out.println("3. Program Sewa");
+        System.out.println("3. Sewa Mobil");
+        System.out.println("---------------------");
         int jawab = in.nextInt();
         if(jawab == 1){
             manajemenmobil();
@@ -65,6 +71,8 @@ public class Main {
     }
     
     private void manajemenmobil(){
+        System.out.println("");
+        System.out.println("-----------------------");
         System.out.println("Program Manajemen Mobil");
         System.out.println("-----------------------");
         System.out.println("");
@@ -74,6 +82,8 @@ public class Main {
         System.out.println("2. Update data mobil");
         System.out.println("3. Hapus data mobil");
         System.out.println("4. Kembali");
+        System.out.println("");
+        System.out.println("Pilih: ");
         int jawab = in.nextInt();
         if(jawab == 1){
             System.out.println("Plat Nomor :");
@@ -118,6 +128,7 @@ public class Main {
             manajemenmobil();
         }else{
             program();
+            System.out.println("Pilihan Hanya 1 - 3");
         }
     }
     
@@ -166,6 +177,9 @@ public class Main {
         System.out.println("----------------");
         System.out.println("1. Sewa Baru");
         System.out.println("2. Kembali");
+        System.out.println("----------------");
+        System.out.println("");
+        System.out.println("Pilih : ");
         int jawab = in.nextInt();
         if (jawab == 1){
             boolean ulang = true;

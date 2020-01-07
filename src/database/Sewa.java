@@ -45,7 +45,9 @@ public class Sewa implements TransaksiDatabase{
             
         } catch (Exception e) {
             System.out.println(e);
-            System.out.println("GAGAL");
+            System.out.println("===============");
+            System.out.println("TRANSAKSI GAGAL");
+            System.out.println("===============");
         }
     }
     
