@@ -16,7 +16,7 @@ public class Main {
         System.out.println("1. Login");
         System.out.println("2. Register");
         System.out.println("================");
-        System.out.println("Pilih: ");
+        System.out.printf("Pilih: ");
         int jawab = in.nextInt();
         if(jawab == 1){
             int login = 1;
@@ -25,9 +25,9 @@ public class Main {
                 System.out.println("-----");
                 System.out.println("Login");
                 System.out.println("-----");
-                System.out.println("Username :");
+                System.out.printf("Username :");
                 String username = in.next();
-                System.out.println("Password :");
+                System.out.printf("Password :");
                 String password = in.next();
                 k.login(username, password);
                 if(k.login==true){
@@ -39,11 +39,11 @@ public class Main {
         }else{
             System.out.println("Register");
             System.out.println("--------");
-            System.out.println("Nama :");
+            System.out.printf("Nama :");
             String nama = in.next();
-            System.out.println("Username :");
+            System.out.printf("Username :");
             String username = in.next();
-            System.out.println("Password :");
+            System.out.printf("Password :");
             String password = in.next();
             k.register(username, password, nama);
             login();
@@ -128,7 +128,6 @@ public class Main {
             manajemenmobil();
         }else{
             program();
-            System.out.println("Pilihan Hanya 1 - 3");
         }
     }
     
