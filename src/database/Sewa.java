@@ -45,6 +45,7 @@ public class Sewa implements TransaksiDatabase{
             
         } catch (Exception e) {
             System.out.println(e);
+            System.out.println("GAGAL");
         }
     }
     
@@ -63,6 +64,7 @@ public class Sewa implements TransaksiDatabase{
             }
         } catch (Exception e) {
             System.out.println(e);
+            System.out.println("Gagal Menghapus Data");
         }
     }
 

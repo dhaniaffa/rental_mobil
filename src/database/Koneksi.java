@@ -37,14 +37,26 @@ public class Koneksi implements KoneksiDatabase{
                 cek = result.getRow();
             }
             if(cek > 0){
+                System.out.println("==============");
                 System.out.println("Berhasil Login");
+                System.out.println("==============");
+                System.out.println("");
                 this.login = true;
             }else{
-                System.out.println("Login gagal");
+                System.out.println("");
+                System.out.println("===============");
+                System.out.println("= Login gagal =");
+                System.out.println("===============");
+                System.out.println("");
                 this.login = false;
             }
             
         } catch (Exception e) {
+            System.out.println("");
+            System.out.println("===========");
+            System.out.println("Login Gagal");
+            System.out.println("===========");
+            System.out.println("");
         }
         
     }
@@ -59,10 +71,17 @@ public class Koneksi implements KoneksiDatabase{
             state.setString(3, pass);
             int cek = state.executeUpdate();
             if(cek > 0){
+                System.out.println("");
+                System.out.println("=================");
                 System.out.println("Berhasil Register");
+                System.out.println("=================");
+                System.out.println("");
                 
             }else{
+                System.out.println("==============");
                 System.out.println("Gagal Register");
+                System.out.println("==============");
+                System.out.println("");
             }
         } catch (Exception e) {
         }
