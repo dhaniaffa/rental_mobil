@@ -64,6 +64,7 @@ public class Main {
         System.out.println("1. Manajemen Mobil");
         System.out.println("2. Manajemen Customer");
         System.out.println("3. Program Sewa");
+        System.out.println("4. Keluar");
         System.out.println("---------------------");
         System.out.println("");
         System.out.printf("Pilih: ");
@@ -74,6 +75,8 @@ public class Main {
             manajemencust();
         }else if(jawab == 3){
             progsewa();
+        }else if (jawab == 4){
+            ;
         }else{
             System.out.println("Program exited");
         }
@@ -229,6 +232,8 @@ public class Main {
         }else if(jawab == 2){
             tampilsewa();
             progsewa();
+        }else if (jawab== 3){
+            program();
         }
     }
     private void tampilsewa(){
@@ -241,10 +246,10 @@ public class Main {
                 Statement statetot = con.createStatement();
                 ResultSet resulttot = statetot.executeQuery(tot);
                 System.out.println("");
-                System.out.println("--------------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("------------------------------------------------------------------------------------------------------------------------------------");
                 String header = "%3s %15s %15s %15s %15s %15s %15s %15s %15s";
                 System.out.println(String.format(header, "ID", "KARYAWAN", "CUSTOMER", "JENIS MOBIL", "PLAT NO", "TGL PINJAM", "TGL KEMBALI", "TOTAL HARI", "TOTAL BAYAR"));
-                System.out.println("--------------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("------------------------------------------------------------------------------------------------------------------------------------");
                 System.out.println("");
                 while(result.next()){
                     String id = result.getString("id_sewa");
@@ -257,6 +262,8 @@ public class Main {
                     String tothari = result.getString("total_hari");
                     String totbayar = result.getString("total_bayar");
                     System.out.println(String.format(header, id, namakaryawan, namacustomer, jenis, plat, tglpinjam, tglkembali, tothari, totbayar));
+                    System.out.println("");
+                    System.out.println("------------------------------------------------------------------------------------------------------------------------------------");
                 }
             } catch (Exception e) {
                 System.out.println(e);
