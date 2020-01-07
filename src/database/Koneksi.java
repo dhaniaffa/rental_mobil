@@ -37,6 +37,7 @@ public class Koneksi implements KoneksiDatabase{
                 cek = result.getRow();
             }
             if(cek > 0){
+                System.out.println("");
                 System.out.println("==============");
                 System.out.println("Berhasil Login");
                 System.out.println("==============");
@@ -78,6 +79,7 @@ public class Koneksi implements KoneksiDatabase{
                 System.out.println("");
                 
             }else{
+                System.out.println("");
                 System.out.println("==============");
                 System.out.println("Gagal Register");
                 System.out.println("==============");
